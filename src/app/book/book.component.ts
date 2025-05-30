@@ -16,6 +16,7 @@ export class BookComponent {
   @ViewChild('coverPageCheckbox', { static: false }) coverCheckbox!: ElementRef<HTMLInputElement>;
   @ViewChild('page1Checkbox', { static: false }) page1Checkbox!: ElementRef<HTMLInputElement>;
   @ViewChild('page2Checkbox', { static: false }) page2Checkbox!: ElementRef<HTMLInputElement>;
+  @ViewChild('page3Checkbox', { static: false }) page3Checkbox!: ElementRef<HTMLInputElement>;
 
   avanzarCoverPage() {
     this.coverCheckbox.nativeElement.checked = true;
@@ -30,7 +31,6 @@ export class BookComponent {
   }
 
   avanzarPage2() {
-    console.log()
     this.page2Checkbox.nativeElement.checked = true;
   }
 
@@ -38,10 +38,19 @@ export class BookComponent {
     this.page2Checkbox.nativeElement.checked = false;
   }
 
+  avanzarPage3() {
+    this.page3Checkbox.nativeElement.checked = true;
+  }
+
+  retrocederPage3() {
+    this.page3Checkbox.nativeElement.checked = false;
+  }
+
   handleNavigation(checkboxId: string) {
     const allPageCheckboxIds = [
       'checkbox-page1',
       'checkbox-page2',
+      'checkbox-page3'
     ];
 
     // Desmarcar todos los checkboxes primero y aplicar lógica inversa
@@ -57,12 +66,6 @@ export class BookComponent {
     });
 
     // Marcar solo el checkbox seleccionado
-    const realCheckbox = document.getElementById(checkboxId) as HTMLInputElement;
-    if (realCheckbox) {
-      realCheckbox.checked = false; // Desmarcarlo primero para permitir la navegación
-      realCheckbox.click(); // Simula el click para activar la animación
-    }
+    const realCheckbox = document.getElementById(checkboxId) as HTMLInputElement
   }
-
-
 }

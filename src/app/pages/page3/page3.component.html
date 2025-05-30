@@ -2,5 +2,15 @@
 <div class="page" id="page3">
   <div class="front-page">
     <p>Contenido frontal de la página 3</p>
+    <label class="next" for="checkbox-page3" (click)="onClickAvanzar()">
+      <i class="fas fa-chevron-right"></i>
+    </label>
+  </div>
+  <div class="back-page">
+    <img src="https://m.media-amazon.com/images/I/61sjlQCC53L._AC_UF1000,1000_QL80_.jpg"
+      alt="imagen">
+    <label class="prev" for="checkbox-page3" (click)="onClickRetroceder()">
+      <i class="fas fa-chevron-left"></i>
+    </label>
   </div>
 </div>

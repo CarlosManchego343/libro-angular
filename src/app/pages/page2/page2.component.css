@@ -42,7 +42,7 @@
 	left: 1em;
 }
 #page2 {
-	z-index: 2;
+	z-index: 3;
 }
 
 input[type="checkbox"]:checked ~ #page2 {

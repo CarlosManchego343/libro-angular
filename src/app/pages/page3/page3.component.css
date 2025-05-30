@@ -42,10 +42,10 @@
 	left: 1em;
 }
 #page3 {
-	z-index: 1;
+	z-index: 2;
 }
 
 input[type="checkbox"]:checked ~ #page3 {
   transform: rotateY(-180deg);
-  z-index: 1;
+  z-index: 4;
 }
