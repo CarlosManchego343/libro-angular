@@ -1,0 +1,30 @@
+<input type="checkbox" id="checkbox-page1" #page1Checkbox>
+<div class="page" id="page1">
+  <div class="front-page">
+    <div class="index-container">
+      <h2>Índice</h2>
+      <ul class="index-list">
+        <li (click)="navigateTo('checkbox-page1')">
+          <span class="index-icon">📁</span>
+          <span class="index-text">Hoja1</span>
+        </li>
+        <li (click)="navigateTo('checkbox-page2')">
+          <span class="index-icon">🛠️</span>
+          <span class="index-text">Hoja2</span>
+        </li>
+      </ul>
+    </div>
+    <label class="next" for="checkbox-page1" (click)="onClickAvanzar()">
+      <i class="fas fa-chevron-right"></i>
+    </label>
+  </div>
+  <div class="back-page">
+    <img
+      src="https://www.shutterstock.com/image-illustration/david-street-style-graphic-designtextile-600nw-2265632523.jpg"
+      alt="imagen">
+    <label class="prev" for="checkbox-page1" (click)="onClickRetroceder()">
+      <i class="fas fa-chevron-left"></i>
+    </label>
+
+  </div>
+</div>

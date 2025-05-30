@@ -1,0 +1,10 @@
+<div class="book-container">
+  <input type="checkbox" id="checkbox-cover" #coverPageCheckbox>
+  <div class="book">
+    <app-cover-page (avanzarPagina)="avanzarCoverPage()"></app-cover-page>
+    <app-page1 (avanzarPagina)="avanzarPage1()" (retrocederPagina)="retrocederPage1()" (navigateToPage)="handleNavigation($event)"></app-page1>
+    <app-page2 (avanzarPagina)="avanzarPage2()" (retrocederPagina)="retrocederPage2()"></app-page2>
+    <app-page3></app-page3>
+    <app-back-cover></app-back-cover>
+  </div>
+</div>

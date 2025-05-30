@@ -1,0 +1,15 @@
+<input type="checkbox" id="checkbox-page2" #page2Checkbox>
+<div class="page" id="page2">
+  <div class="front-page">
+    <p>Contenido frontal de la página 2</p>
+    <label class="next" for="checkbox-page2" (click)="onClickAvanzar()">
+      <i class="fas fa-chevron-right"></i>
+    </label>
+  </div>
+  <div class="back-page">
+    <img src="https://img.freepik.com/vector-gratis/nina-feliz-mariposa_1450-103.jpg?semt=ais_hybrid&w=740" alt="imagen">
+    <label class="prev" for="checkbox-page2" (click)="onClickRetroceder()">
+      <i class="fas fa-chevron-left"></i>
+    </label>
+  </div>
+</div>
