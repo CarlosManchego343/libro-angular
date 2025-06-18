@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-indice',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './indice.component.css'
 })
 export class IndiceComponent {
+  @Output() paginaSeleccionada = new EventEmitter<number>();
 
+  irAPagina(pagina: number) {
+    this.paginaSeleccionada.emit(pagina);
+  }
 }

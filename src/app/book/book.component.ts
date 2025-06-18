@@ -23,15 +23,21 @@ export class BookComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.pageFlip = new PageFlip(this.bookContainer.nativeElement, {
-        width: 300,
-        height: 400,
+        width: 800,
+        height: 900,
         showCover: true,
-        maxShadowOpacity: 0.5,
+        maxShadowOpacity: 0.1,
         useMouseEvents: true,
         mobileScrollSupport: false,
       });
 
       this.pageFlip.loadFromHTML(document.querySelectorAll('.my-page') as NodeListOf<HTMLElement>);
+    }
+  }
+
+  goToPage(page: number) {
+    if (this.pageFlip) {
+      this.pageFlip.flipTo(page);
     }
   }
 }
