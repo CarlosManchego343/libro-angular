@@ -1,10 +1,22 @@
 <div #book class="book-container"></div>
 
 <div class="hidden-book">
-  <div class="my-page page" data-density="hard"><app-portada></app-portada></div>
-  <div class="my-page page"> <app-indice (paginaSeleccionada)="goToPage($event)"></app-indice></div>
-  <div class="my-page page"><app-page1></app-page1></div>
-  <div class="my-page page"><app-page2></app-page2></div>
-  <div class="my-page page"><app-page3></app-page3></div>
-  <div class="my-page page" data-density="hard"><app-contraportada></app-contraportada></div>
+  <div class="my-page page" data-density="hard" data-page-number="0">
+    <app-portada></app-portada>
+  </div>
+  <div class="my-page page" data-page-number="1">
+    <app-indice (paginaSeleccionada)="goToPage($event)"></app-indice>
+  </div>
+  <div class="my-page page" data-page-number="2">
+    <app-page1></app-page1>
+  </div>
+  <div class="my-page page" data-page-number="3">
+    <app-page2></app-page2>
+  </div>
+  <div class="my-page page" data-page-number="4">
+    <app-page3></app-page3>
+  </div>
+  <div class="my-page page" data-density="hard" data-page-number="5">
+    <app-contraportada></app-contraportada>
+  </div>
 </div>

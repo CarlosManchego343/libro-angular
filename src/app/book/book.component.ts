@@ -31,13 +31,28 @@ export class BookComponent implements AfterViewInit {
         mobileScrollSupport: false,
       });
 
-      this.pageFlip.loadFromHTML(document.querySelectorAll('.my-page') as NodeListOf<HTMLElement>);
+      const pages = document.querySelectorAll('.my-page') as NodeListOf<HTMLElement>;
+      this.pageFlip.loadFromHTML(pages);
+
+      setTimeout(() => {
+        this.pageFlip.updateFromHtml(pages); // opcional pero útil
+      }, 0);
+
+      this.bookContainer.nativeElement
+        .querySelectorAll('.my-page app-indice, .my-page app-indice *')
+        .forEach((el: HTMLElement) => {
+          el.addEventListener('mousedown', (e) => e.stopPropagation());
+          el.addEventListener('touchstart', (e) => e.stopPropagation());
+        });
     }
   }
 
   goToPage(page: number) {
+    console.log('Ir a página:', page); // debug
     if (this.pageFlip) {
-      this.pageFlip.flipTo(page);
+      this.pageFlip.getPageCount(); // Total de páginas
+      this.pageFlip.flipController.flipToPage(page);
     }
   }
+
 }

@@ -1,0 +1,22 @@
+ul {
+  pointer-events: auto;
+  user-select: none;
+  margin: 0 auto;
+  padding: 0;
+  width: fit-content;
+  list-style: none;
+  text-align: center;
+}
+
+ul li {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin: 0.3rem 0;
+  background: #f0f0f0;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+ul li:hover {
+  background: #ddd;
+}
