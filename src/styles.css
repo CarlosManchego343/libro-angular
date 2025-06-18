@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+.page {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  box-sizing: border-box;
+}
